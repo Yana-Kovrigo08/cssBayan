@@ -2,6 +2,7 @@ body {
   background-color: gainsboro;
   padding: 20px 70px;
   font-family: "Arial", sans-serif;
+  margin: 0 auto;
 }
 h1 {
   font-size: 46px;
@@ -10,6 +11,14 @@ h1 {
 main {
   font-size: 30px;
   font-weight: 800;
+}
+
+.faq {
+  color: blueviolet;
+  background-image: none;
+}
+.faq:hover {
+  color: black;
 }
 .faq-items {
   display: flex;
@@ -22,16 +31,54 @@ main {
   width: 400px;
   height: 400px;
   padding-top: 20px;
-}
-.faq-title {
-  display: block;
-  cursor: pointer;
+  transition: 2s;
 }
 
+label {
+  display: block;
+  cursor: pointer;
+  position: relative;
+  transition: 1s;
+}
+label:after {
+  content: "";
+  position: absolute;
+  right: 15px;
+  bottom: 2px;
+  border: 10px solid transparent;
+  border-top: 20px solid blueviolet;
+}
+label:hover {
+  color: black;
+}
 .faq-input {
   appearance: none;
   position: absolute;
+  transition: 1s;
 }
-.faq-input:checked + .mem{
-    display: block;
+.faq-input:checked ~ .mem {
+  display: block;
+}
+
+.faq-input:hover ~ .mem {
+  display: block;
+  transition: 2s;
+}
+.faq-input:checked ~ label {
+  color: black;
+  transition: 2s;
+}
+.faq-input:checked ~ label:after {
+  border: 10px solid transparent;
+  border-bottom: 20px solid black;
+  transition: all 1s ease-out;
+}
+.faq-input:hover ~ label:after {
+  border: 10px solid transparent;
+  border-bottom: 20px solid black;
+  transition: all 1s ease-out;
+}
+.faq-title {
+  display: flex;
+  justify-content: space-between;
 }
