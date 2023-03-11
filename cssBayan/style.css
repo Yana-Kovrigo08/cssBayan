@@ -1,0 +1,37 @@
+body {
+  background-color: gainsboro;
+  padding: 20px 70px;
+  font-family: "Arial", sans-serif;
+}
+h1 {
+  font-size: 46px;
+  font-weight: 900;
+}
+main {
+  font-size: 30px;
+  font-weight: 800;
+}
+.faq-items {
+  display: flex;
+  flex-direction: column;
+  padding: 10px 0;
+}
+
+.mem {
+  display: none;
+  width: 400px;
+  height: 400px;
+  padding-top: 20px;
+}
+.faq-title {
+  display: block;
+  cursor: pointer;
+}
+
+.faq-input {
+  appearance: none;
+  position: absolute;
+}
+.faq-input:checked + .mem{
+    display: block;
+}
