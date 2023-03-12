@@ -35,29 +35,45 @@ main {
   margin-left: auto;
   margin-right: auto;
   transform: translateY(0%);
-animation-name: Appearance;
-animation-duration: 1s;
-animation-timing-function: cubic-bezier(.1,-.6,.2,0);
+  animation-name: Appearance;
+  animation-duration: 1s;
+  animation-timing-function: cubic-bezier(0.1, -0.6, 0.2, 0);
 }
 
 @-webkit-keyframes Appearance {
-0% {opacity: 0;}
-100% {opacity: 1;}
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 @-o-keyframes Appearance {
-0% {opacity: 0;}
-100% {opacity: 1;}
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 @-moz-keyframes Appearance {
-0% {opacity: 0;}
-100% {opacity: 1;}
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 @keyframes Appearance {
-0% {opacity: 0;}
-100% {opacity: 1;}
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 label {
@@ -72,7 +88,7 @@ label:after {
   right: 15px;
   bottom: 2px;
   border: 10px solid transparent;
-  border-top: 20px solid ;
+  border-top: 20px solid;
 }
 
 .faq-input {
@@ -91,6 +107,7 @@ label:after {
 .faq-input:checked ~ label {
   color: black;
   transition: 2s;
+
 }
 .faq-input:checked ~ label:after {
   border: 10px solid transparent;
@@ -107,46 +124,44 @@ label:after {
   justify-content: space-between;
 }
 
-
-@media (max-width: 820px){
-    h1 {
-        font-size: 35px;
-        font-weight: 700;
-      }
-      main {
-        font-size: 25px;
-        font-weight: 600;
-      } 
+@media (max-width: 820px) {
+  h1 {
+    font-size: 35px;
+    font-weight: 700;
+  }
+  main {
+    font-size: 25px;
+    font-weight: 600;
+  }
 }
-@media (max-width: 600px){
-    body {
-        padding: 15px 15px;
-        margin: 0 auto;
-      }
-      h1 {
-        font-size: 28px;
-        font-weight: 800;
-      }
-      main {
-        font-size: 20px;
-        font-weight: 400;
-      }
-      label:after {
-        content: "";
-        position: absolute;
-        right: 10px;
-        bottom: 3px;
-        border: 7px solid transparent;
-        border-top: 15px solid blueviolet;
-      }
-      .faq-input:hover ~ label:after {
-        border: 7px solid transparent;
-        border-bottom: 15px solid black;
-        transition: all 0.5s ease-out;
-      }
-      .mem{
-        width: 250px;
-        height: 250px;
-      }
-    }
-
+@media (max-width: 600px) {
+  body {
+    padding: 15px 15px;
+    margin: 0 auto;
+  }
+  h1 {
+    font-size: 28px;
+    font-weight: 800;
+  }
+  main {
+    font-size: 20px;
+    font-weight: 400;
+  }
+  label:after {
+    content: "";
+    position: absolute;
+    right: 10px;
+    bottom: 3px;
+    border: 7px solid transparent;
+    border-top: 15px solid blueviolet;
+  }
+  .faq-input:hover ~ label:after {
+    border: 7px solid transparent;
+    border-bottom: 15px solid black;
+    transition: all 0.5s ease-out;
+  }
+  .mem {
+    width: 250px;
+    height: 250px;
+  }
+}
